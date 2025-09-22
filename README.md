@@ -1,6 +1,6 @@
 # knowledge-graph-Ontology-health-medical-history (BioBERT + Ollama + BERTopic)
 
-This repository contains a single Jupyter notebook, **`MedicalOntology-Code.ipynb`**, that builds a medical-history knowledge graph from the public Hugging Face dataset **`davanstrien/MedicalHistoryofBritishIndia`**. It does so in three big steps (“three main cells”), and writes cleaned CSVs and visualizations.
+This repository contains a single Jupyter notebook (provided here as MedicalOntology-Code.zip due to size limits, unzip first)
 
 > TL;DR:  
 > 1) **Cell 1** (index 3): NER with BioBERT + relation extraction with **Ollama** → writes `relations_<model>.{csv,jsonl}` and caches.  
