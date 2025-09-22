@@ -57,6 +57,29 @@ The notebook reads these to tune Ollama calls:
 
 ---
 
+### Large files note
+Some intermediate artifacts and the notebook itself are very large.  
+To stay within GitHub size limits:
+
+- **Notebook**:  
+  `MedicalOntology-Code.zip` contains the full Jupyter notebook (`MedicalOntology-Code.ipynb`, ~29 MB).  
+  Please unzip it locally to open the notebook in Jupyter or VS Code.
+
+- **NER cache**:  
+  `biobert_entities - a few rows.json` contains **only a small sample** of the full NER cache  
+  (the original file was ~360 MB). Running Cell 1 of the notebook will regenerate the full file.
+
+- **Relations**:  
+  `relations_qwen2.5_32b-instruct.zip` and `relations_clean.zip` are compressed versions of  
+  large relation CSVs. Unzip them before use.
+
+- **Other omitted artifacts**:  
+  Files like `raw_texts.json` are not included due to their size but can be regenerated  
+  by running the notebook end-to-end.
+
+This keeps the repository lightweight and anonymous, while still providing working examples of the outputs.
+---
+
 ## Data flow & Outputs (by cell)
 
 ### 🧩 Cell 1 — NER + Relation Extraction (streamed per document)
