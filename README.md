@@ -137,14 +137,13 @@ This keeps the repository lightweight and anonymous, while still providing worki
 - *(optional)* `graph.graphml`
 
 
-> In notebooks, defaults are prefilled — run the cell and it will produce `kg_out_relations/kg_all/*`.
-
+In notebooks, defaults are prefilled — run the cell and it will produce \kg_out_relations/*`.`
 ---
 
 ### 🧪 Cell 3 — Topics & Ontology Induction (+ optional LLM filtering)
 **File:** cell index **9** in the notebook  
 **What it does:**
-- Reads `kg_out_relations/kg_all/edges_aggregated.csv`.
+- Reads \kg_out_relations/edges_aggregated.csv`.`
 - Constructs per-document texts and fits **BERTopic** to infer topics.
 - Maps relations to topics by document co-occurrence.
 - Optionally **filters low-quality relations** with an Ollama call (same server variables as Cell 1).
