@@ -19,9 +19,9 @@ This repository contains a single Jupyter notebook (provided here as MedicalOnto
 **Optional (if you want others to see example outputs without running anything):**
 - `relations_<model>.csv` and `relations_<model>.jsonl` (from Step 1)  
 - `kg_out_relations/kg_all/` contents (from Step 2):  
-  `edges_aggregated.csv`, `nodes.csv`, `relation_types.csv`, `relation_inventory.csv`, `ontology.json`, `ontology_clean.json`, optionally `graph.graphml`  
+  `edges_aggregated.csv`, `edges_aggregated.zip`, `nodes.csv`, `relation_types.csv`, `relation_inventory.csv`, `ontology.json`, `ontology_clean.json`, optionally `graph.graphml`
 - Topic artifacts (from Step 3):  
-  `doc_texts.csv`, `doc_topics.csv`, `ontology_topics.csv`, `relation_topics.csv`, `relation_topics_all.csv`, `topic_top_relations.csv`, `ontology_overview.{png,pdf}`, `ontology_topics_network.{png,pdf}`, `topic_<id>_ego.png`  
+  `doc_texts.csv`, `doc_topics.csv`, `ontology_topics.csv`, `relation_topics.csv`, `relation_topics_all.csv`, `topic_top_relations.csv`, `ontology_overview.{png,pdf}`, `ontology_topics_network.{png,pdf}`, `topic_<id>_ego.png`, `llm_filter_cache.jsonl`
 - `LICENSE` (e.g., MIT), if you want to specify terms
 
 > You do **not** need to upload model weights or the dataset; the notebook pulls models from Hugging Face and reads the dataset directly.
@@ -172,7 +172,7 @@ Set `KG_DIR` at the top of this cell if you placed outputs elsewhere.
 - **CPU-only runs** are possible (they’re slower): use `--ner_on_cpu` in Cell 1 and `--device cpu` in Cell 2.
 - **Model IDs** are Hugging Face names and will be downloaded automatically on first run:
   - NER: `d4data/biomedical-ner-all`
-  - Embeddings: `pritamdeka/S-BioBert-snli-multinli-stsb` (and similar in Cell 3)
+  - Embeddings: `pritamdeka/S-BioBert-snli-multinli-stsb` (used in both Cell 2 and Cell 3)
 - **Reproducibility:** The pipeline writes intermediate CSV/JSONL so you can resume downstream steps without re-running everything.
 
 ---
