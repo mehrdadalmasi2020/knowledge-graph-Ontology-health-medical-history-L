@@ -4,7 +4,7 @@ This repository contains a single Jupyter notebook (provided here as MedicalOnto
 
 > TL;DR:  
 > 1) **Cell 1** (index 3): NER with BioBERT + relation extraction with **Ollama** → writes `relations_<model>.{csv,jsonl}` and caches.  
-> 2) **Cell 2** (index 5): Cleans & clusters entities/relations with **BioBERT embeddings + BERTopic** → writes `kg_all/*` (nodes, relation types, aggregated edges, ontology).  
+> 2) **Cell 2** (index 5): Cleans & clusters entities/relations with **BioBERT embeddings + BERTopic** → writes `kg_out_relations/*` (nodes, relation types, aggregated edges, ontology).  
 > 3) **Cell 3** (index 9): Builds **document topics**, maps relations to topics, optional **LLM filtering** via Ollama → writes topic CSVs and overview images.
 
 ---
@@ -18,7 +18,7 @@ This repository contains a single Jupyter notebook (provided here as MedicalOnto
 
 **Optional (if you want others to see example outputs without running anything):**
 - `relations_<model>.csv` and `relations_<model>.jsonl` (from Step 1)  
-- `kg_out_relations/kg_all/` contents (from Step 2):  
+- `kg_out_relations/` contents (from Step 2):  
   `edges_aggregated.csv`, `edges_aggregated.zip`, `nodes.csv`, `relation_types.csv`, `relation_inventory.csv`, `ontology.json`, `ontology_clean.json`, optionally `graph.graphml`
 - Topic artifacts (from Step 3):  
   `doc_texts.csv`, `doc_topics.csv`, `ontology_topics.csv`, `relation_topics.csv`, `relation_topics_all.csv`, `topic_top_relations.csv`, `ontology_overview.{png,pdf}`, `ontology_topics_network.{png,pdf}`, `topic_<id>_ego.png`, `llm_filter_cache.jsonl`
@@ -66,8 +66,10 @@ To stay within GitHub size limits:
   Please unzip it locally to open the notebook in Jupyter or VS Code.
 
 - **NER cache**:  
-  `biobert_entities - a few rows.json` contains **only a small sample** of the full NER cache  
-  (the original file was ~360 MB). Running Cell 1 of the notebook will regenerate the full file.
+  `biobert_entities.json` is the full NER cache (~360 MB).  
+  A small sample (`biobert_entities - a few rows.json`) is included for illustration.  
+  Running Cell 1 will regenerate the full cache if missing.
+
 
 - **Relations**:  
   `relations_qwen2.5_32b-instruct.zip` and `relations_clean.zip` are compressed versions of  
