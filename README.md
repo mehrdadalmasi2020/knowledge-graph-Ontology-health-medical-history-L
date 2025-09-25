@@ -184,5 +184,3 @@ Set `KG_DIR` at the top of this cell if you placed outputs elsewhere.
 - NER model: `d4data/biomedical-ner-all`
 - Sentence embeddings: `pritamdeka/S-BioBert-snli-multinli-stsb`
 - Topic modeling: **BERTopic**
-
-cell
