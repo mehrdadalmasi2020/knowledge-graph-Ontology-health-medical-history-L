@@ -126,14 +126,16 @@ This keeps the repository lightweight and anonymous, while still providing worki
 - Optional: `--ner_json biobert_entities.json`
 - Optional: `--device cpu` (if no CUDA), `--do_graphml`
 
-**Outputs (under `kg_out_relations/kg_all/`):**
+**Outputs (under `kg_out_relations/`):**
 - `edges_aggregated.csv`
+- `edges_aggregated.zip`
 - `nodes.csv`
 - `relation_types.csv`
 - `relation_inventory.csv`
 - `ontology.json`
 - `ontology_clean.json`
 - *(optional)* `graph.graphml`
+
 
 > In notebooks, defaults are prefilled — run the cell and it will produce `kg_out_relations/kg_all/*`.
 
@@ -165,9 +167,8 @@ Set `KG_DIR` at the top of this cell if you placed outputs elsewhere.
 
 1. **Run Cell 1** (index 3) — produces `relations_<model>.csv` and caches.  
    - If you don’t have an Ollama server, you can still run NER; relation extraction will require it.
-2. **Run Cell 2** (index 5) — point `--relations_csv` to the CSV from Cell 1; produces `kg_out_relations/kg_all/*`.
-3. **Run Cell 3** (index 9) — reads `kg_out_relations/kg_all/edges_aggregated.csv` and writes topic CSVs/figures.
-
+2. **Run Cell 2** (index 5) — point `--relations_csv` to the CSV from Cell 1; produces `kg_out_relations/*`.
+3. **Run Cell 3** (index 9) — reads `kg_out_relations/edges_aggregated.csv` and writes topic CSVs/figures.
 ---
 
 ## Notes & Tips
@@ -185,3 +186,4 @@ Set `KG_DIR` at the top of this cell if you placed outputs elsewhere.
 - Sentence embeddings: `pritamdeka/S-BioBert-snli-multinli-stsb`
 - Topic modeling: **BERTopic**
 
+cell
