@@ -138,7 +138,7 @@ This keeps the repository lightweight and anonymous, while still providing worki
 - *(optional)* `graph.graphml`
 
 
-In notebooks, defaults are prefilled — run the cell and it will produce **kg_out_relations*.
+In notebooks, defaults are prefilled — run the cell and it will produce **kg_out_relations**.
 ---
 
 ### 🧪 Cell 3 — Topics & Ontology Induction (+ optional LLM filtering)
