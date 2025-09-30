@@ -4,7 +4,7 @@ This repository contains a single Jupyter notebook (provided here as MedicalOnto
 
 > TL;DR:  
 > 1) **Cell 1** (index 3): NER with BioBERT + relation extraction with **Ollama** → writes `relations_<model>.{csv,jsonl}` and caches.  
-> 2) **Cell 2** (index 5): Cleans & clusters entities/relations with **BioBERT embeddings + BERTopic** → writes `kg_out_relations/*` (nodes, relation types, aggregated edges, ontology).  
+> 2) **Cell 2** (index 5): Cleans & clusters entities/relations with **BioBERT embeddings + BERTopic** → writes `kg_out_relations` (nodes, relation types, aggregated edges, ontology).  
 > 3) **Cell 3** (index 9): Builds **document topics**, maps relations to topics, optional **LLM filtering** via Ollama → writes topic CSVs and overview images.
 
 ---
