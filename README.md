@@ -5,7 +5,7 @@ This repository contains a single Jupyter notebook (provided here as MedicalOnto
 > TL;DR:  
 > 1) **Cell 1** (index 3): NER with BioBERT + relation extraction with **Ollama** → writes `relations_<model>.{csv,jsonl}` and caches.  
 > 2) **Cell 2** (index 5): Cleans & clusters entities/relations with **BioBERT embeddings + BERTopic** → writes `kg_out_relations` (nodes, relation types, aggregated edges, ontology).  
-> 3) **Cell 3** (index 9): Builds **document topics**, maps relations to topics, optional **LLM filtering** via Ollama → writes topic CSVs and overview images.
+> 3) **Cell 3** (index 9): Builds **document topics**, maps relations to topics, **LLM filtering** via Ollama → writes topic CSVs and overview images.
 
 ---
 
@@ -16,10 +16,10 @@ This repository contains a single Jupyter notebook (provided here as MedicalOnto
 - `README.md` *(this file)*
 - `requirements.txt` *(Python deps to run the notebook)*
 
-**Optional (if you want others to see example outputs without running anything):**
+**To see example outputs without running anything:**
 - `relations_<model>.csv` and `relations_<model>.jsonl` (from Step 1)  
 - `kg_out_relations/` contents (from Step 2):  
-  `edges_aggregated.csv`, `edges_aggregated.zip`, `nodes.csv`, `relation_types.csv`, `relation_inventory.csv`, `ontology.json`, `ontology_clean.json`, optionally `graph.graphml`
+  `edges_aggregated.csv`, `edges_aggregated.zip`, `nodes.csv`, `relation_types.csv`, `relation_inventory.csv`, `ontology.json`, `ontology_clean.json`
 - Topic artifacts (from Step 3):  
   `doc_texts.csv`, `doc_topics.csv`, `ontology_topics.csv`, `relation_topics.csv`, `relation_topics_all.csv`, `topic_top_relations.csv`, `ontology_overview.{png,pdf}`, `ontology_topics_network.{png,pdf}`, `topic_<id>_ego.png`, `llm_filter_cache.jsonl`
 - `LICENSE` (e.g., MIT), if you want to specify terms
@@ -124,7 +124,7 @@ This keeps the repository lightweight and anonymous, while still providing worki
 **How to run (typical arguments):**
 - `--relations_csv <path>`: use the CSV from Cell 1 (e.g., `relations_qwen2.5_32b-instruct.csv`)
 - `--out_dir kg_out_relations`
-- Optional: `--ner_json biobert_entities.json`
+- `--ner_json biobert_entities.json`
 - Optional: `--device cpu` (if no CUDA), `--do_graphml`
 
 **Outputs (under `kg_out_relations`):**
@@ -135,13 +135,12 @@ This keeps the repository lightweight and anonymous, while still providing worki
 - `relation_inventory.csv`
 - `ontology.json`
 - `ontology_clean.json`
-- *(optional)* `graph.graphml`
 
 
 In notebooks, defaults are prefilled — run the cell and it will produce **kg_out_relations**.
 ---
 
-### 🧪 Cell 3 — Topics & Ontology Induction (+ optional LLM filtering)
+### 🧪 Cell 3 — Topics & Ontology Induction & LLM filtering)
 **File:** cell index **9** in the notebook  
 **What it does:**
 - Reads \kg_out_relations/edges_aggregated.csv`.`
