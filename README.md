@@ -42,7 +42,8 @@ pip install -r requirements.txt
   ```bash
   ollama run qwen2.5:32b-instruct
   ```
-- A CUDA GPU is **optional**. You can force CPU for NER (`--ner_on_cpu`) and use small batch sizes.
+- By default the code attempts to use CUDA if available; use `--device cpu` to force CPU mode.
+
 
 ### Useful environment variables (override defaults)
 The notebook reads these to tune Ollama calls:
@@ -117,7 +118,7 @@ This keeps the repository lightweight and anonymous, while still providing worki
 **What it does:**
 - Cleans entities/relations (removes OCR noise, short garbage strings).
 - Embeds unique strings with **Sentence-Transformers BioBERT** (`pritamdeka/S-BioBert-snli-multinli-stsb`).
-- Clusters entities & relations using **UMAP + HDBSCAN**, then builds a small schema (e.g., `treated_with`, `causes`, `located_in`).
+- Clusters entities & relations using **UMAP + HDBSCAN**, then maps relations to a small schema (e.g., "treated_with", "causes", "located_in", "vaccinated_against").
 - Writes an aggregated knowledge graph and a human-readable inventory.
 
 **How to run (typical arguments):**
@@ -146,7 +147,7 @@ In notebooks, defaults are prefilled — run the cell and it will produce \kg_ou
 - Reads \kg_out_relations/edges_aggregated.csv`.`
 - Constructs per-document texts and fits **BERTopic** to infer topics.
 - Maps relations to topics by document co-occurrence.
-- Optionally **filters low-quality relations** with an Ollama call (same server variables as Cell 1).
+- Applies an additional LLM-based quality filter to relation–topic assignments (using the same Ollama setup as in Cell 1).
 - Exports CSVs and overview images.
 
 **Outputs (in the working directory):**
@@ -176,6 +177,8 @@ Set `KG_DIR` at the top of this cell if you placed outputs elsewhere.
   - NER: `d4data/biomedical-ner-all`
   - Embeddings: `pritamdeka/S-BioBert-snli-multinli-stsb` (used in both Cell 2 and Cell 3)
 - **Reproducibility:** The pipeline writes intermediate CSV/JSONL so you can resume downstream steps without re-running everything.
+- **Determinism:** Random seeds and embedding caches are fixed to ensure reproducible clustering and canonical labels across runs.
+
 
 ---
 
