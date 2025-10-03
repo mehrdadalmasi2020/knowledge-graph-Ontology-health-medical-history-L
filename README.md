@@ -7,38 +7,39 @@ This repository contains code, outputs, and evaluation artifacts for the induced
 repo-root/
 │
 ├── code/ # Pipeline scripts and notebooks
-│ └── MedicalOntology-Code.zip
+│   └── MedicalOntology-Code.zip
 │
 ├── data/ # Processed text slices and metadata
-│ ├── doc_texts.csv
-│ ├── doc_topics.csv
-│ └── ...
+│   ├── doc_texts.csv
+│   ├── doc_topics.csv
+│   └── ...
 │
 ├── kg_out_relations/ # Induced ontology exports
-│ ├── edges_aggregated.zip
-│ ├── ontology.json
-│ ├── ontology_clean.json
-│ ├── relation_inventory.csv
-│ └── relation_types.csv
+│   ├── edges_aggregated.zip
+│   ├── ontology.json
+│   ├── ontology_clean.json
+│   ├── relation_inventory.csv
+│   └── relation_types.csv
 │
 ├── outputs/ # Derived plots and ontology visualizations
-│ ├── ontology_overview.pdf
-│ ├── ontology_topics_network.pdf
-│ ├── pipeline_diagram.png
-│ └── ...
+│   ├── ontology_overview.pdf
+│   ├── ontology_topics_network.pdf
+│   ├── pipeline_diagram.png
+│   └── ...
 │
 ├── analyse/ # Evaluation and diagnostic results
-│ ├── edge_diagnostics.json
-│ ├── edge_metric_summary.csv
-│ ├── ranking_stability.csv
-│ ├── top_pairs_overall.csv
-│ ├── top_pairs_pre-1900.csv
-│ ├── top_pairs_1900s.csv
-│ ├── top_pairs_1910s.csv
-│ ├── top_pairs_1920plus.csv
-│ └── plots/ (hist_lift.png, hist_npmi.png, hist_score.png, stability.png)
+│   ├── edge_diagnostics.json
+│   ├── edge_metric_summary.csv
+│   ├── ranking_stability.csv
+│   ├── top_pairs_overall.csv
+│   ├── top_pairs_pre-1900.csv
+│   ├── top_pairs_1900s.csv
+│   ├── top_pairs_1910s.csv
+│   ├── top_pairs_1920plus.csv
+│   └── plots/ (hist_npmi.png, stability.png)
 │
 └── README.md # This file
+
 
 This repository contains a single Jupyter notebook (packaged as `MedicalOntology-Code.zip` due to size limits). 
 Please unzip it first to access the notebook, which we explain below.
