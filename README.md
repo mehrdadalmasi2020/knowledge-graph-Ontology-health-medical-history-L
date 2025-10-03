@@ -24,7 +24,7 @@ repo-root/
 │
 ├── outputs/ # Derived plots and ontology visualizations
 │   ├── biobert_entities - a few rows.json
-│   ├── ontology_topics_network.pdf
+│   ├── relation_topics_all.csv
 │   ├── pipeline_diagram.png
 │   └── ...
 │
