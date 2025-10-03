@@ -1,0 +1,16 @@
+K,pair,jaccard@K
+20,with_time vs combined,0.0
+20,assoc vs combined,0.25
+20,cohes vs combined,0.0
+50,with_time vs combined,0.030927835051546393
+50,assoc vs combined,0.9230769230769231
+50,cohes vs combined,0.0
+100,with_time vs combined,0.32450331125827814
+100,assoc vs combined,0.680672268907563
+100,cohes vs combined,0.0
+200,with_time vs combined,0.49812734082397003
+200,assoc vs combined,0.7094017094017094
+200,cohes vs combined,0.0
+500,with_time vs combined,0.6077170418006431
+500,assoc vs combined,0.8903591682419659
+500,cohes vs combined,0.0
