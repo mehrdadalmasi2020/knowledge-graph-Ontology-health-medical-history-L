@@ -14,7 +14,6 @@ repo-root/
 ├── data/ # Processed text slices and metadata
 │   ├── doc_texts.csv
 │   ├── doc_topics.csv
-│   └── ...
 │
 ├── kg_out_relations/ # Induced ontology exports
 │   ├── edges_aggregated.zip
