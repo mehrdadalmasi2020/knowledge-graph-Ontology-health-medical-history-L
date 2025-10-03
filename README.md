@@ -42,6 +42,7 @@ repo-root/
 │
 └── README.md # This file
 
+```
 
 This repository contains a single Jupyter notebook (packaged as `MedicalOntology-Code.zip` due to size limits). 
 Please unzip it first to access the notebook, which we explain below.
