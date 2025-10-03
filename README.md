@@ -4,6 +4,8 @@
 
 This repository contains code, outputs, and evaluation artifacts for the induced biomedical knowledge graph from historical colonial medical reports (1850–1950).
 
+## Repository Structure
+
 repo-root/
 │
 ├── code/ # Pipeline scripts and notebooks
