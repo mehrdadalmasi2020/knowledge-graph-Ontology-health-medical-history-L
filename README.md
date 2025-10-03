@@ -23,7 +23,7 @@ repo-root/
 │   └── relation_types.csv
 │
 ├── outputs/ # Derived plots and ontology visualizations
-│   ├── ontology_overview.pdf
+│   ├── biobert_entities - a few rows.json
 │   ├── ontology_topics_network.pdf
 │   ├── pipeline_diagram.png
 │   └── ...
