@@ -25,7 +25,7 @@ repo-root/
 ├── outputs/ # Derived plots and ontology visualizations
 │   ├── biobert_entities - a few rows.json
 │   ├── relation_topics_all.csv
-│   ├── pipeline_diagram.png
+│   ├── relations_qwen2.5_32b-instruct.zip
 │   └── ...
 │
 ├── analyse/ # Evaluation and diagnostic results
