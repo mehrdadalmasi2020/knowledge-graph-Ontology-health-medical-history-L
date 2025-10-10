@@ -53,25 +53,6 @@ Please unzip it first to access the notebook, which we explain below.
 
 ---
 
-## What to upload to the (anonymous) Hugging Face repo
-
-**Minimum (recommended):**
-- `MedicalOntology-Code.ipynb` *(the notebook you shared)*
-- `README.md` *(this file)*
-- `requirements.txt` *(Python deps to run the notebook)*
-
-**To see example outputs without running anything:**
-- `relations_<model>.csv` and `relations_<model>.jsonl` (from Step 1)  
-- `kg_out_relations/` contents (from Step 2):  
-  `edges_aggregated.csv`, `edges_aggregated.zip`, `nodes.csv`, `relation_types.csv`, `relation_inventory.csv`, `ontology.json`, `ontology_clean.json`
-- Topic artifacts (from Step 3):  
-  `doc_texts.csv`, `doc_topics.csv`, `ontology_topics.csv`, `relation_topics.csv`, `relation_topics_all.csv`, `topic_top_relations.csv`, `ontology_overview.{png,pdf}`, `ontology_topics_network.{png,pdf}`, `topic_<id>_ego.png`, `llm_filter_cache.jsonl`
-- `LICENSE` (e.g., MIT), if you want to specify terms
-
-> You do **not** need to upload model weights or the dataset; the notebook pulls models from Hugging Face and reads the dataset directly.
-
----
-
 ## Environment & Dependencies
 
 Install Python 3.10+ and run:
