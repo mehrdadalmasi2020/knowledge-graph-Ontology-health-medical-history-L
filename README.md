@@ -162,7 +162,9 @@ This keeps the repository lightweight and anonymous, while still providing worki
 - `ontology_clean.json`
 
 
-In notebooks, defaults are prefilled — run the cell and it will produce **kg_out_relations**.
+The aggregated edge file also reports the reliability measures used during scoring and diagnostics, including `count`, `docs`, `lift`, `npmi`, `jacc_doc`, `time_decayed_support`, `s_cohesion`, `r_cohesion`, `o_cohesion`, and `score`. In the released code, the final `score` combines log-scaled frequency, document support, positive NPMI, average embedding cohesion, and a small normalized temporal-decay adjustment. `lift` and `jacc_doc` are included as additional diagnostic measures for inspection and evaluation.
+
+In notebooks, defaults are prefilled run the cell and it will produce **kg_out_relations**.
 ---
 
 ### 🧪 Cell 3 — Topics & Ontology Induction & LLM filtering)
