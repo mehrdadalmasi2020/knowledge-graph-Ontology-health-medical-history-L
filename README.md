@@ -207,7 +207,44 @@ Set `KG_DIR` at the top of this cell if you placed outputs elsewhere.
 
 
 ---
+---
 
+# Citation
+
+If you use this repository, code, ontology, or derived resources in your research, please cite our LREC-COLING 2026 paper:
+
+> Almasi, M., & Karatas, T. (2026). *Historical Medical Knowledge Graphs and Ontologies from the Medical History of British India Corpus (1850–1950).* In **Proceedings of the Fifteenth Language Resources and Evaluation Conference (LREC-COLING 2026)**, Palma, Mallorca, Spain, pp. 7781–7790. European Language Resources Association (ELRA). https://doi.org/10.63317/4pisentrkhfh
+
+### BibTeX
+
+```bibtex
+@inproceedings{almasi-etal-2026-historical,
+  title = {Historical Medical Knowledge Graphs and Ontologies from the Medical History of British India Corpus (1850--1950)},
+  author = {Almasi, Mehrdad and Karatas, Tugce},
+  booktitle = {Proceedings of the Fifteenth Language Resources and Evaluation Conference (LREC-COLING 2026)},
+  month = {May},
+  year = {2026},
+  pages = {7781--7790},
+  address = {Palma, Mallorca, Spain},
+  publisher = {European Language Resources Association (ELRA)},
+  editor = {Piperidis, Stelios and Bel, Núria and van den Heuvel, Henk and Ide, Nancy and Krek, Simon and Toral, Antonio},
+  doi = {10.63317/4pisentrkhfh}
+}
+```
+
+### Repository
+
+If you use the released code, ontology, relation inventories, or evaluation artifacts, please also cite this GitHub repository:
+
+```text
+Mehrdad Almasi and Tugce Karatas. 2026.
+knowledge-graph-Ontology-health-medical-history (BioBERT + Ollama + BERTopic).
+GitHub repository.
+https://github.com/mehrdadalmasi2020/knowledge-graph-Ontology-health-medical-history
+```
+
+**Please cite both the paper and this repository when using the released code or generated resources.**
+---
 ## Citation / Credits
 - Dataset: `davanstrien/MedicalHistoryofBritishIndia` (Hugging Face Datasets)
 - NER model: `d4data/biomedical-ner-all`
